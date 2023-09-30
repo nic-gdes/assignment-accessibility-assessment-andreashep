@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility assessment</title>
-    <link href="https://h3s.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
@@ -102,7 +104,7 @@
         <p>
         The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.
         </p>
-        <audio controls>
+        <audio controls autoplay preload="auto"><label for="position">Audio</label><label for="volume">Volume</label>
           <audio src="media/bear.mp3" type="audio/mp3"><p>Audio transcript: This isn’t really an audio fact file about bears, but it is an audio file that you can transcribe.</p>
           <source src="media/bear.ogg" type="audio/ogg">
           <p>It looks like your browser doesn't support HTML5 audio players.</p>
@@ -130,11 +132,11 @@
             <form class="comment-form">
               <div class="flex-pair">
                 Your name:
-                <label input type="text" name="name" id="name" placeholder="Enter your name"></label>
+                <label for="name" input type="text" name="name" id="name" placeholder="Enter your name">Your name</label>
               </div>
               <div class="flex-pair">
                 Your comment:
-                <label input type="text" name="comment" id="comment" placeholder="Enter your comment"></label>
+                <label for="comment" input type="text" name="comment" id="comment" placeholder="Enter your comment">Your comment</label>
               </div>
               <div>
                 <input type="submit" value="Submit comment">
